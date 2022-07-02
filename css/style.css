@@ -18,9 +18,18 @@ body{
   font-size: 1em;
 }
 
+
+@keyframes aparecer {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+  }
+
 h1{
   font-size: 3em;
   text-align: center;
+  animation-duration: 8s;
+  animation-name: aparecer;
+  animation-iteration-count: infinite;
 }
 
 h3{
@@ -101,7 +110,7 @@ footer{
     grid-area: footer;
     padding-top: 10px;
     padding-bottom: 10px;
-    background:rgb(6, 146, 151);
+    background: linear-gradient(to top,rgb(6, 146, 151),rgb(2, 57, 65),rgb(6, 146, 151));
 }
 footer>.redes{
     display: flex;
@@ -153,7 +162,7 @@ section#servicios{
 nav{
     grid-area: nav;
     justify-self:stretch;
-    background:rgb(6, 146, 151);
+    background: linear-gradient(to top,rgb(6, 146, 151),rgb(2, 57, 65),rgb(6, 146, 151));
 }
 nav>.menu{
     display: flex;
@@ -172,6 +181,8 @@ aside{
     grid-area: publicidad;
 }
 
+
+
 #grilla>aside>section {
     display: flex;
     flex-direction: row;
@@ -179,6 +190,23 @@ aside{
     padding-top: 1cm;
 }
 
+
+@keyframes efecto{
+    0%{ width: 100px; }
+    25%{ width: 200px; }
+    50%{ width: 200px;}
+    75%{ width: 200px;}
+    100%{ width: 100px;}
+  } 
+  
+#grilla>aside>section img {
+    animation-name: efecto;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
+  animation-delay: 0s;
+
+}
 
 @media screen and (min-width:701px) and (max-width:1069px){
     #grilla{
